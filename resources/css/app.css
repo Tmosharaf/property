@@ -1,0 +1,253 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+/* Slick Slider */
+/**
+ * Minified by jsDelivr using clean-css v4.2.0.
+ * Original file: /npm/slick-carousel@1.8.1/slick/slick.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+ .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: 0;
+}
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-list,
+.slick-slider .slick-track {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:after,
+.slick-track:before {
+    display: table;
+    content: "";
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+    float: right;
+}
+.slick-slide img {
+    display: block;
+}
+.slick-slide.slick-loading img {
+    display: none;
+}
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.menu-item {
+    @apply px-2 py-1 text-base inline-block text-white hover:text-red-800 duration-200;
+}
+
+.section-title {
+    @apply font-bold text-4xl text-center my-5;
+}
+
+.container {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    @apply bg-red-800 border-red-800 border-2 text-white px-4 py-2 inline-block rounded-md font-bold hover:bg-transparent hover:text-black hover:border-gray-900 duration-150;
+}
+
+.btn-outline {
+    @apply hover:bg-red-800 border-black border-2 text-black px-4 py-2 inline-block rounded-md font-bold hover:text-white hover:border-red-800 duration-150;
+}
+
+a {
+    @apply hover:text-red-800 duration-150;
+}
+.stuck {
+    @apply bg-white duration-200 shadow-md z-50 fixed;
+}
+.stuck .menu-item {
+    @apply text-black hover:text-red-800;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Liberation Serif", sans-serif;
+    font-weight: bold;
+}
+
+select:focus {
+    outline: none;
+    outline-offset: 0;
+    border: 0;
+    --tw-ring-shadow: 0;
+}
+
+body {
+    background: #f8f6f3;
+}
+
+/* Single Property */
+
+.inputLabel {
+    @apply block text-base mb-1;
+}
+.inputField {
+    @apply px-3 py-3 w-full border-0 focus:outline-none text-sm;
+}
+input:focus {
+    --tw-ring-color: none;
+}
+#description p {
+    margin-bottom: 15px;
+}
+
+/* Slick Js */
+
+.single-item {
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+
+.thumbSlider {
+    height: 80px;
+    margin-top: 15px;
+}
+
+.thumbSlider .single-item {
+    height: 80px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.thumbSlider .single-item.slick-current {
+    opacity: 1;
+}
+
+.slick-arrow {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.5;
+}
+.slick-arrow:hover {
+    opacity: 1;
+}
+.slick-next.slick-arrow {
+    left: auto;
+    right: 12px;
+}
+
+/* Search Form */
+
+.single-search-field {
+    @apply flex flex-col mx-3;
+}
+.search-field-border {
+    @apply py-3 self-center border-gray-500 border-2;
+}
+
+/* Search Form on Search Page*/
+.inputLabel {
+    @apply text-sm text-gray-600;
+}
+.vertical-search-form {
+    @apply self-baseline
+}
+.vertical-search-form .single-search-field select {
+    border: 1px solid #eee;
+    @apply shadow-sm rounded-sm;
+}
+
+.vertical-search-form .search-form, .vertical-search-form .search-form > div{
+@apply block w-full
+}
+
+
+.vertical-search-form .single-search-field{
+@apply mx-auto mt-3
+}
+.vertical-search-form .search-field-border{
+@apply hidden
+}
+.vertical-search-form .search-submit{
+@apply mx-auto mt-3
+}
+.vertical-search-form .search-submit button{
+    @apply w-full mt-2
+}
